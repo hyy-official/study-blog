@@ -1,23 +1,23 @@
 export const menuItems = [
     {
-        title: "News",
-        href: "/topic/news",
+        title: "자연어",
+        href: "/topic/nlp",
     },
     {
-        title: "Reviews",
-        href: "/topic/reviews",
+        title: "비전",
+        href: "/topic/vision",
     },
     {
-        title: "Best",
+        title: "강화학습",
         href: "/topic/best",
     },
     {
-        title: "Devices",
-        href: "/topic/devices",
+        title: "코딩[Python]",
+        href: "/topic/coding-python",
     },
     {
-        title: "About",
-        href: "/about",
+        title: "코딩[Other]",
+        href: "/topic/coding-other",
     },
     {
         title: "Contact",
