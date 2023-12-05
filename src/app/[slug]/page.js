@@ -49,7 +49,7 @@ function PostPage({ params }) {
       <div className={styles.ArticleSubtitle}>{post.subtitle}</div>
       <img
         src={post.featured_image}
-        alt="대체 텍스트를 여기에 입력"
+        alt="대체 텍스트"
         width="800"
         height="480"
         loading="eager" // `priority` 속성은 `loading="eager"`로 변환됩니다.

@@ -22,12 +22,10 @@ function PostPreview(props) {
         >
             <div className={styles.ImageWrapper}>
                 <img
-                    className={styles.Image} // CSS 클래스
-                    src={props.featured_image} // 이미지 소스
-                    alt="aa" // 대체 텍스트
-                    width="100%" // fill 대신 너비를 100%로 설정
-                    style={{ objectFit: "cover" }} // objectFit 스타일 적용
-                    loading="eager" // priority 속성은 loading="eager"로 변환
+                    className={styles.Image}
+                    src={props.featured_image}
+                    alt="aa"
+                    style={{ objectFit: "cover" }} // CSS 스타일 적용
                 />
             </div>
             <div className={styles.ArticleTextInfo}>
