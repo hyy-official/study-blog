@@ -2,7 +2,7 @@
 title: Test
 subtitle: testetstett
 date: 2023-12-04
-featured_image: public/images/main_image.png
+featured_image: https://raw.githubusercontent.com/hyy-official/study-blog/main/public/images/main_image.png
 topics:
   - vision
 author: 홍윤영
