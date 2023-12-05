@@ -11,6 +11,8 @@ const nextConfig = {
   cssModules: {
     modules: true,
   },
+  basePath: process.env.NODE_ENV === 'production' ? '/study-blog' : '',
+  assetPrefix: process.env.NODE_ENV === 'production' ? '/study-blog' : ''
 };
 
 module.exports = withContentlayer(nextConfig);
