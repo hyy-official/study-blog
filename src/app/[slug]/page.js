@@ -48,7 +48,7 @@ function PostPage({ params }) {
       <h1 className={styles.ArticleTitle}>{post.title}</h1>
       <div className={styles.ArticleSubtitle}>{post.subtitle}</div>
       <Image
-        src={`https://hyy-official.github.io/study-blog/${props.featured_image}`}
+        src={`https://hyy-official.github.io/study-blog/${post.featured_image}`}
         alt=""
         width={800}
         height={480}
