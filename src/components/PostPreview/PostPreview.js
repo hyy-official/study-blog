@@ -9,6 +9,7 @@ import Link from "next/link";
 
 function PostPreview(props) {
     const router = useRouter();
+    console.log(props);
     return (
         <div
             style={{ textDecoration: "inherit", color: "inherit" }}
@@ -23,7 +24,7 @@ function PostPreview(props) {
                 <Image
                     className={styles.Image}
                     src={props.featured_image}
-                    alt=""
+                    alt="aa"
                     fill
                     sizes="100%"
                     priority

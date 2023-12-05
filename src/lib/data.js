@@ -13,11 +13,11 @@ export const menuItems = [
     },
     {
         title: "코딩[Python]",
-        href: "/topic/coding-python",
+        href: "/topic/python",
     },
     {
         title: "코딩[Other]",
-        href: "/topic/coding-other",
+        href: "/topic/other",
     },
     {
         title: "Contact",
