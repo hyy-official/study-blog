@@ -8,4 +8,4 @@ featured_image: /study-blog/images/mamba.png
 author: 홍윤영
 ---
 
-test
+![test](/study-blog/images/mamba.png)
