@@ -47,12 +47,12 @@ function PostPage({ params }) {
       </div>
       <h1 className={styles.ArticleTitle}>{post.title}</h1>
       <div className={styles.ArticleSubtitle}>{post.subtitle}</div>
-      <Image
-        src={`https://hyy-official.github.io/study-blog/${post.featured_image}`}
-        alt=""
-        width={800}
-        height={480}
-        priority
+      <img
+        src={post.featured_image}
+        alt="대체 텍스트를 여기에 입력"
+        width="800"
+        height="480"
+        loading="eager" // `priority` 속성은 `loading="eager"`로 변환됩니다.
       />
       <div className={styles.Byline}>
         {post.author} /{" "}
