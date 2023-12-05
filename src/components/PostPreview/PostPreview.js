@@ -9,7 +9,7 @@ import Link from "next/link";
 
 function PostPreview(props) {
     const router = useRouter();
-    console.log(props);
+
     return (
         <div
             style={{ textDecoration: "inherit", color: "inherit" }}
@@ -23,7 +23,7 @@ function PostPreview(props) {
             <div className={styles.ImageWrapper}>
                 <Image
                     className={styles.Image}
-                    src="/study-blog/images/mamba.png"
+                    src={`https://hyy-official.github.io/study-blog/${props.featured_image}`}
                     alt="aa"
                     fill
                     sizes="100%"

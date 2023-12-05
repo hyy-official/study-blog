@@ -4,9 +4,11 @@
  */
 const { withContentlayer } = require('next-contentlayer')
 
+
 const nextConfig = {
   reactStrictMode: true,
   swcMinify: true,
+  trailingSlash: true,
   output: 'export',
   cssModules: {
     modules: true,
