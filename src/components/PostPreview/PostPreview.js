@@ -23,7 +23,7 @@ function PostPreview(props) {
             <div className={styles.ImageWrapper}>
                 <Image
                     className={styles.Image}
-                    src={props.featured_image}
+                    src="/study-blog/images/mamba.png"
                     alt="aa"
                     fill
                     sizes="100%"
