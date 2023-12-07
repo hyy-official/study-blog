@@ -1,4 +1,11 @@
-
+---
+title: alpaCode2
+subtitle: AlpaCode2
+date: 2023-12-08
+topics: ["nlp"]
+featured_image: /study-blog/images/mamba.png
+author: 홍윤영
+---
   
 AlphaCode (Li et al., 2022)는 경쟁적 프로그래밍에서 중간 수준의 참가자와 동등한 수준에서 성능을 발휘한 최초의 인공지능(AI) 시스템이었습니다. 
 이는 고급 수학, 논리, 컴퓨터 과학을 포함하는 어려운 추론 작업이었습니다. 

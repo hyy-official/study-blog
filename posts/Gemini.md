@@ -1,7 +1,11 @@
 ---
-title: gemini 분석
+title: "Gemini 테크니컬 리포트 리뷰"
+subtitle: Gemini 리뷰
+date: 2023-12-08
+topics: ["nlp"]
+featured_image: /study-blog/images/mamba.png
+author: 홍윤영
 ---
-  
 ​Google에서 개발한 고성능 다중 모드 모델 제품군인 Gemini를 소개합니다. 
 
 우리는 각 영역에 대한 최첨단 이해 및 추론 성능과 함께 양식 전반에 걸쳐 강력한 일반 기능을 모두 갖춘 모델을 구축할 목적으로 이미지, 오디오, 비디오 및 텍스트 데이터 전반에 걸쳐 Gemini를 공동으로 교육했습니다. 

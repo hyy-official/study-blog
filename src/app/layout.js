@@ -1,7 +1,7 @@
 import "../styles/main.css";
 import Navbar from "@/components/navbar/Navbar";
 import NextTopLoader from "nextjs-toploader";
-//import Footer from "@/components/footer/Footer";
+import Footer from "@/components/footer/Footer";
 import { siteInfo } from "@/lib/data";
 import DesktopMenu from "@/components/desktop-menu/DesktopMenu";
 
@@ -18,9 +18,7 @@ export default function RootLayout({ children }) {
         <Navbar />
         <DesktopMenu />
         <div className="content">{children}</div>
-        {/*
         <Footer />
-        */ }
       </body>
     </html>
   );
