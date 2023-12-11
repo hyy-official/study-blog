@@ -10,7 +10,7 @@ import PostPreview from "@/components/PostPreview/PostPreview";
 
 function Topic() {
     const pathname = usePathname();
-    const topicName = pathname.replace("/topic/", "").toLowerCase();
+    const topicName = pathname.replace("/topic/", "").toLowerCase().replace('/', '');
 
     // get posts specific to topic in question
     const posts = allPosts
@@ -20,13 +20,10 @@ function Topic() {
             return topicsInLowerCase.includes(topicName);
         })
         .sort((a, b) => compareDesc(new Date(a.date), new Date(b.date)));
-    console.log(posts)
-    console.log(allPosts)
     // generate previews of posts
     const postPreviews = posts.map((post, idx) => (
         <PostPreview key={idx} {...post} />
     ));
-
     return (
         <div className={styles.TopicPageContainer}>
             <h1 className="TopicTitle">{topicName.toUpperCase()}</h1>

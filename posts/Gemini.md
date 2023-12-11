@@ -2,7 +2,7 @@
 title: "Gemini 테크니컬 리포트 리뷰"
 subtitle: Gemini 리뷰
 date: 2023-12-08
-topics: ["nlp"]
+topics: ["NLP"]
 featured_image: /study-blog/images/mamba.png
 author: 홍윤영
 ---
