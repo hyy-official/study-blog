@@ -1,31 +1,40 @@
 "use client";
 
+import { useState, useEffect } from 'react';
 import { allPosts } from "@/.contentlayer/generated";
 import styles from "./Search.module.css";
-import { usePathname } from "next/navigation";
+import { useRouter } from 'next/router';
 import { compareDesc } from "date-fns";
 import PostPreview from "@/components/PostPreview/PostPreview";
 
 function Search() {
-    const pathname = usePathname();
-    const keyword = pathname.replace("/search/", "");
-    const decodedKeyword = decodeURIComponent(keyword);
+    const [keyword, setKeyword] = useState('');
+    const [posts, setPosts] = useState([]);
+    const router = useRouter();
 
-    const posts = allPosts
-        .filter((post) => {
-            // convert title array to lowercase to search for matches
-            const titleInLowerCase = post.title.toString().toLowerCase();
-            return titleInLowerCase.includes(decodedKeyword);
-        })
-        .sort((a, b) => compareDesc(new Date(a.date), new Date(b.date)));
+    useEffect(() => {
+        if (router.query.keyword) {
+            const decodedKeyword = decodeURIComponent(router.query.keyword);
+            setKeyword(decodedKeyword);
 
-    // generate previews of posts
+            const filteredPosts = allPosts
+                .filter((post) => {
+                    const titleInLowerCase = post.title.toString().toLowerCase();
+                    return titleInLowerCase.includes(decodedKeyword);
+                })
+                .sort((a, b) => compareDesc(new Date(a.date), new Date(b.date)));
+
+            setPosts(filteredPosts);
+        }
+    }, [router.query.keyword]);
+
     const postPreviews = posts.map((post, idx) => (
         <PostPreview key={idx} {...post} />
     ));
+
     return (
         <div className={styles.SearchPageContainer}>
-            <h1>Search Results for &quot;{decodedKeyword}&quot;</h1>
+            <h1>Search Results for &quot;{keyword}&quot;</h1>
             <div className="ListPosts">{postPreviews}</div>
         </div>
     );
