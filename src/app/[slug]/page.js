@@ -1,5 +1,3 @@
-"use client";
-
 import fs from "fs";
 import Markdown from "react-markdown";
 import matter from "gray-matter";
