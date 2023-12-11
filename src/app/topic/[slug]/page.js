@@ -20,7 +20,8 @@ function Topic() {
             return topicsInLowerCase.includes(topicName);
         })
         .sort((a, b) => compareDesc(new Date(a.date), new Date(b.date)));
-
+    console.log(posts)
+    console.log(allPosts)
     // generate previews of posts
     const postPreviews = posts.map((post, idx) => (
         <PostPreview key={idx} {...post} />
