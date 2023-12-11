@@ -1,3 +1,5 @@
+"use client";
+
 import { allPosts } from "@/.contentlayer/generated";
 import styles from "./Search.module.css";
 import { usePathname } from "next/navigation";

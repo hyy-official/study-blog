@@ -1,3 +1,5 @@
+"use client";
+
 import { allPosts, Post } from "contentlayer/generated";
 import { usePathname } from "next/navigation";
 import styles from "./Topic.module.css";
