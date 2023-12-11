@@ -33,3 +33,36 @@ function Topic() {
 }
 
 export default Topic;
+
+// This function gets called at build time
+export async function getStaticPaths() {
+    // 여기서 `topics`는 모든 가능한 slug를 나타냅니다.
+    const topics = await getTopics();
+
+    // 각 slug에 대해 페이지 경로를 반환합니다.
+    const paths = topics.map((topic) => ({
+        params: { slug: topic.slug },
+    }));
+
+    // `fallback: false`는 존재하지 않는 경로에 대해 404 페이지를 반환하도록 합니다.
+    return { paths, fallback: false };
+}
+
+export async function getStaticProps({ params }) {
+    // params.slug를 사용하여 해당 topic의 데이터를 가져옵니다.
+    const topicData = await getTopicData(params.slug);
+
+    // Not found
+    if (!topicData) {
+        return {
+            notFound: true,
+        };
+    }
+
+    // Success
+    return {
+        props: {
+            topicData,
+        },
+    };
+}
