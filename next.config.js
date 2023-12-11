@@ -10,9 +10,6 @@ const nextConfig = {
   swcMinify: true,
   trailingSlash: true,
   output: 'export',
-  cssModules: {
-    modules: true,
-  },
   basePath: process.env.NODE_ENV === 'production' ? '/study-blog' : '',
   assetPrefix: process.env.NODE_ENV === 'production' ? '/study-blog' : ''
 };
