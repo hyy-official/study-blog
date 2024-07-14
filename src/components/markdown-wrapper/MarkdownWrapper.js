@@ -1,6 +1,7 @@
 import Markdown from "react-markdown";
 import Image from "next/image";
 import styles from "./MarkdownWrapper.module.css";
+import ImageLoader from "@/components/image-loader/ImageLoader";
 
 const MarkdownWrapper = ({ children }) => {
     const customComponents = {
@@ -17,6 +18,7 @@ const MarkdownWrapper = ({ children }) => {
                     width={800}
                     height={480}
                     objectFit="contain"
+                    loader={ImageLoader}
                 />
             );
         },

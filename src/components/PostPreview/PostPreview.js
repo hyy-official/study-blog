@@ -6,6 +6,7 @@ import { useRouter } from "next/navigation";
 import { format, parseISO } from "date-fns";
 import { Post } from "@/.contentlayer/generated";
 import Link from "next/link";
+import ImageLoader from "@/components/image-loader/ImageLoader";
 
 function PostPreview(props) {
     const router = useRouter();
@@ -30,6 +31,7 @@ function PostPreview(props) {
                     width={800}
                     height={480}
                     style={{ objectFit: "cover" }}
+                    loader={ImageLoader}
                 />
             </div>
             <div className={styles.ArticleTextInfo}>
