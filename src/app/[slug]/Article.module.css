@@ -11,6 +11,9 @@
     flex-direction: column;
     gap: 0.5rem;
     align-items: center;
+    padding: 0 1rem; /* 패딩 추가 */
+    max-width: 1200px; /* 최대 너비 설정 */
+    margin: 0 auto; /* 가운데 정렬 */
 }
 
 .ArticleTopics {
@@ -20,6 +23,7 @@
     align-items: center;
     font-weight: 500;
     font-size: 1rem;
+    flex-wrap: wrap; /* 반응형으로 변경 */
 }
 
 .ArticleTopic {
@@ -34,18 +38,34 @@
 .ArticleTitle {
     font-weight: 600 !important;
     font-family: "Encode Sans Semi Condensed", sans-serif !important;
+    text-align: center; /* 가운데 정렬 */
+    margin: 0.5rem 0; /* 여백 추가 */
+    font-size: 2rem; /* 글꼴 크기 증가 */
 }
 
 .ArticleSubtitle {
     color: var(--primary-600) !important;
     font-size: 1.2rem;
+    text-align: center; /* 가운데 정렬 */
 }
 
 .Byline {
     color: var(--primary-600) !important;
     font-weight: 500;
+    text-align: center; /* 가운데 정렬 */
+    margin: 0.5rem 0; /* 여백 추가 */
 }
 
 .ArticleBody {
     font-size: 1.2rem;
+    line-height: 1.6; /* 줄 높이 추가 */
+    max-width: 800px; /* 최대 너비 설정 */
+    width: 100%; /* 전체 너비 사용 */
+}
+
+.ArticleImage {
+    width: 100%;
+    height: auto;
+    max-width: 800px; /* 최대 너비 설정 */
+    margin: 1rem 0; /* 여백 추가 */
 }

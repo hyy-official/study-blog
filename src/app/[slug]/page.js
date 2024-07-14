@@ -28,31 +28,33 @@ export default function PostPage({ params }) {
         </p>
       </div>
     );
+
   return (
     <div className={styles.Article}>
       <div className={styles.ArticleTopics}>
-        {post.topics.map((category) => {
-          return (
-            <Link
-              href={`topic/${category}`}
-              key={category}
-              className={styles.ArticleTopic}
-              style={{ textDecoration: "inherit" }}
-            >
-              {category}
-            </Link>
-          );
-        })}
+        {post.topics.map((category) => (
+          <Link
+            href={`topic/${category}`}
+            key={category}
+            className={styles.ArticleTopic}
+            style={{ textDecoration: "inherit" }}
+          >
+            {category}
+          </Link>
+        ))}
       </div>
       <h1 className={styles.ArticleTitle}>{post.title}</h1>
       <div className={styles.ArticleSubtitle}>{post.subtitle}</div>
-      <Image
-        src={post.featured_image}
-        alt="대체 텍스트"
-        width={800}
-        height={480}
-        loading="eager"
-      />
+      <div className={styles.ArticleImage}>
+        <Image
+          src={post.featured_image}
+          alt="대체 텍스트"
+          layout="responsive"
+          width={800}
+          height={480}
+          loading="eager"
+        />
+      </div>
       <div className={styles.Byline}>
         {post.author} /{" "}
         <time dateTime={post.date}>
