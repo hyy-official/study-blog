@@ -19,6 +19,7 @@ export const generateMetadata = ({ params }) => {
 
 export default function PostPage({ params }) {
   const post = allPosts.find((post) => post._raw.flattenedPath === params.slug);
+  const isProd = process.env.NODE_ENV === 'production';
   if (!post)
     return (
       <div className={styles.ErrorMessage}>
