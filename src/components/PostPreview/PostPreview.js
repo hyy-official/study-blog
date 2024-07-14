@@ -10,7 +10,7 @@ import Link from "next/link";
 function PostPreview(props) {
     const router = useRouter();
     const isProd = process.env.NODE_ENV === 'production';
-    const imagePath = `${isProd ? '/YOUR_REPOSITORY_NAME' : ''}/images/${props.featured_image}`;
+    const imagePath = `${isProd ? '/study-blog' : ''}/images/${props.featured_image}`;
 
     return (
         <div
