@@ -34,10 +34,10 @@ export default function PostPage({ params }) {
       <div className={styles.ArticleTopics}>
         {post.topics.map((category) => (
           <Link
-            href={`topic/${category}`}
+            href={`/topic/${category}`}
             key={category}
             className={styles.ArticleTopic}
-            style={{ textDecoration: "inherit" }}
+            style={{ textDecoration: 'inherit' }}
           >
             {category}
           </Link>
@@ -47,7 +47,7 @@ export default function PostPage({ params }) {
       <div className={styles.ArticleSubtitle}>{post.subtitle}</div>
       <div className={styles.ArticleImage}>
         <Image
-          src={post.featured_image}
+          src={`${isProd ? '/study-blog' : ''}/images/${post.featured_image}`}
           alt="대체 텍스트"
           layout="responsive"
           width={800}
@@ -56,9 +56,9 @@ export default function PostPage({ params }) {
         />
       </div>
       <div className={styles.Byline}>
-        {post.author} /{" "}
+        {post.author} /{' '}
         <time dateTime={post.date}>
-          {format(parseISO(post.date), "LLLL d, yyyy")}
+          {format(parseISO(post.date), 'LLLL d, yyyy')}
         </time>
       </div>
       <div className={styles.ArticleBody}>

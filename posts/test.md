@@ -3,7 +3,7 @@ title: alpaCode2
 subtitle: AlpaCode2
 date: 2023-12-08
 topics: ["NLP"]
-featured_image: /study-blog/images/mamba.png
+featured_image: mamba.png
 author: 홍윤영
 ---
   

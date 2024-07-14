@@ -9,6 +9,8 @@ import Link from "next/link";
 
 function PostPreview(props) {
     const router = useRouter();
+    const isProd = process.env.NODE_ENV === 'production';
+    const imagePath = `${isProd ? '/YOUR_REPOSITORY_NAME' : ''}/images/${props.featured_image}`;
 
     return (
         <div
@@ -16,16 +18,18 @@ function PostPreview(props) {
             onClick={(event) => {
                 event.stopPropagation();
                 router.push(props.url);
-            }} // go to the article page
-            // href={props.url}
+            }}
             className={styles.PostPreviewContainer}
         >
             <div className={styles.ImageWrapper}>
-                <img
+                <Image
                     className={styles.Image}
-                    src={props.featured_image}
-                    alt="aa"
-                    style={{ objectFit: "cover" }} // CSS 스타일 적용
+                    src={imagePath}
+                    alt={props.title}
+                    layout="responsive"
+                    width={800}
+                    height={480}
+                    style={{ objectFit: "cover" }}
                 />
             </div>
             <div className={styles.ArticleTextInfo}>
