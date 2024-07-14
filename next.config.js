@@ -12,7 +12,7 @@ const nextConfig = {
   basePath: isProd ? '/study-blog' : '',
   assetPrefix: isProd ?  '/study-blog/' : '',
   images: {
-    unoptimized: isProd ? false: true,  // 이미지 최적화 비활성화
+    unoptimized: true, // 이미지 최적화 비활성화
     loader: 'default',
     path: isProd ? '/study-blog/' : '/',
   },

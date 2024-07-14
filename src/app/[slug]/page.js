@@ -4,7 +4,6 @@ import matter from "gray-matter";
 import Image from "next/image";
 import styles from "./Article.module.css";
 import MarkdownWrapper from "@/components/markdown-wrapper/MarkdownWrapper";
-import ImageLoader from "@/components/image-loader/ImageLoader";
 import Link from "next/link";
 import { format, parseISO } from "date-fns";
 import { allPosts } from "contentlayer/generated";
@@ -57,7 +56,7 @@ export default function PostPage({ params }) {
           width={800}
           height={480}
           loading="eager"
-          loader={ImageLoader}
+          
         />
       </div>
       <div className={styles.Byline}>
