@@ -9,7 +9,7 @@ const nextConfig = {
   reactStrictMode: true,
   swcMinify: true,
   trailingSlash: true,
-  //output: 'export',
+  output: 'export',
   basePath: process.env.NODE_ENV === 'production' ? '/study-blog' : '',
   assetPrefix: process.env.NODE_ENV === 'production' ? '/study-blog' : ''
 };
