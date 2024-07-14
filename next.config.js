@@ -10,7 +10,7 @@ const nextConfig = {
   trailingSlash: true,
   output: 'export',
   basePath: isProd ? '/study-blog' : '',
-  assetPrefix: isProd ?  '/study-blog' : '',
+  assetPrefix: isProd ?  '/study-blog/' : '',
   images: {
     unoptimized: isProd ? false: true,  // 이미지 최적화 비활성화
     loader: 'default',
