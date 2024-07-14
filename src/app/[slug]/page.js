@@ -1,7 +1,6 @@
 import fs from "fs";
 import Markdown from "react-markdown";
 import matter from "gray-matter";
-// import getPostMetadata from "@/lib/getPostMetadata";
 import Image from "next/image";
 import styles from "./Article.module.css";
 import MarkdownWrapper from "@/components/markdown-wrapper/MarkdownWrapper";
@@ -18,7 +17,7 @@ export const generateMetadata = ({ params }) => {
   return { title: post.title };
 };
 
-function PostPage({ params }) {
+export default function PostPage({ params }) {
   const post = allPosts.find((post) => post._raw.flattenedPath === params.slug);
   if (!post)
     return (
@@ -47,12 +46,12 @@ function PostPage({ params }) {
       </div>
       <h1 className={styles.ArticleTitle}>{post.title}</h1>
       <div className={styles.ArticleSubtitle}>{post.subtitle}</div>
-      <img
+      <Image
         src={post.featured_image}
         alt="대체 텍스트"
-        width="800"
-        height="480"
-        loading="eager" // `priority` 속성은 `loading="eager"`로 변환됩니다.
+        width={800}
+        height={480}
+        loading="eager"
       />
       <div className={styles.Byline}>
         {post.author} /{" "}
@@ -66,5 +65,3 @@ function PostPage({ params }) {
     </div>
   );
 }
-
-export default PostPage;
