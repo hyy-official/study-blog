@@ -2,7 +2,7 @@
 title: RAG에 대하여 (2) 사후 검색 강화와 데이터베이스
 subtitle: survey 논문 기반 RAG 리서치
 date: 2024-05-11
-topics: ["NLP"]
+topics: ["NLP", "RAG", "Survey"]
 featured_image: RAG_SURVEY_PART2.png
 author: 홍윤영
 ---
